@@ -1,0 +1,134 @@
+:root{
+    --fuentePrincipal: 'Glass Antiqua', cursive;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;/* para que cada rem valga 10px */
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 1.6rem;/* para restablecer los valores predeterminados */
+    background-image: url('../img/background.jpg');
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.header-background{
+    background-color: #000;
+    min-width: 25%;
+    border-radius: 10rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.titulo{
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 5rem;
+    color: #fff;
+    margin: 0;
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn{
+    background-color: #2654ea;
+    color: #fff;
+    font-size: 2rem;
+    border: none;
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn:first-of-type{
+    background-color: #d43636;
+}
+.btn:first-of-type:active{
+    background-color: #ce7b7b;
+}
+
+.btn:active{
+    background-color: #6e8beb;
+}
+
+.btn:disabled{
+    background-color: #6e8beb;
+    cursor: not-allowed;
+}
+main{
+    flex: 1;
+}
+
+.jugadores-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@media (width <= 768px){
+    .jugadores-grid{
+        grid-template-columns: none;
+    }
+}
+
+.jugador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.jugador h2{
+    color: #fff;
+}
+
+.jugador-cartas{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 35rem;
+}
+
+.carta{
+    width: 15rem;
+    position: relative;
+    left: 3.5rem;
+    margin-left: -7.2rem;
+}
+
+.lose, .win, .nobody{
+    text-align: center;
+    color: red;
+    font-size: 10rem;
+    margin: 0;
+}
+
+.win{
+    color: green;
+}
+
+.nobody{
+    color: gold;
+}
+
+footer{
+    background-color: #000;
+}
+
+.created{
+    color: #fff;
+    text-align: center;
+}

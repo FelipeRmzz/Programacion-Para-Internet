@@ -1,0 +1,209 @@
+:root{
+    --colorPrimario: #488C3E;
+    --blanco: #f2f2f2;
+    --fuentePrincipal: 'Roboto', sans-serif;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.6%;/* para que cada rem valga 10px */
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 1.6rem;/* para restablecer el valor por defecto pero en rem */
+    background-color: #74A65D;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.gradiente{
+    background: linear-gradient(to right, var(--colorPrimario), #F2F2F2, var(--colorPrimario));/* se utiliza para establecer el gradiente lineal como fondo del elemento */
+    -webkit-background-clip: text;/* Esta línea es para navegadores webkit (Safari, Chrome) */
+    background-clip: text;/* se utilizan para que el gradiente solo se aplique al texto y no al área circundante */
+    color: transparent;/* se utiliza para hacer que el texto sea transparente, de modo que el gradiente de fondo sea visible a través del texto. */
+}
+
+.header{
+    background-color: #0D0D0D;
+    padding: 2rem;
+}
+
+.header-contenido{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+@media (width <= 768px){
+    .header-contenido{
+        grid-template-columns: none;
+        gap: 1rem;
+    }
+}
+
+.header-imagen {
+    display: flex;
+    justify-content: flex-end; /* Esto alinea la imagen a la derecha */
+}
+@media (width <= 768px){
+    .header-imagen{
+        justify-content: center;
+    }
+}
+
+.header-imagen img{
+    display: block;
+    max-width: 100%;
+    max-height: 30rem;
+}
+
+.header-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (width <= 768px){
+    .header-contenido{
+        justify-content: center;
+    }
+}
+
+.header-texto p{
+    color: var(--blanco);
+    font-family: var(--fuentePrincipal);
+}
+@media (width <= 768px){
+    .header-texto p, h1{
+        text-align: center;
+    }
+}
+
+.header-texto h1{
+    margin: 0;
+    font-size: 7rem;
+    font-family: var(--fuentePrincipal);
+}
+
+
+/* navegacion */
+.contenedor-nav{
+    max-width: 120rem;
+    width: 70%;
+    margin: 10rem auto 10rem auto;
+}
+@media (width <= 768px){
+    .contenedor-nav{
+        margin: 0 auto;
+    }
+}
+.navegacion ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (width <= 937px){
+    .navegacion ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .navegacion li{
+        margin: 2rem;
+    }
+}
+.navegacion a{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2.5rem;
+    background-color: var(--colorPrimario);
+    padding: 1rem 4rem;
+    border-radius: 3rem;
+}
+
+@media (width <= 768px){
+    .navegacion a{
+        font-size: 2rem;
+        padding: 1rem;
+    }
+}
+
+
+main{
+    flex: 1;
+}
+
+
+
+/* footer */
+footer{
+    background-color: #0D0D0D;
+}
+.created{
+    text-align: center;
+    color: var(--blanco);
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0;
+}
+
+/* formulario */
+form{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+fieldset{
+    font-family: var(--fuentePrincipal);
+    max-width: 50%;
+    border-color: #0D0D0D;
+}
+
+fieldset div{
+    margin-bottom: 1rem;
+}
+legend{
+    text-align: center;
+    font-size: 5rem;
+}
+label{
+    font-size: 2rem;
+
+}
+input{
+    border-radius: 2rem;
+    background-color: rgb(180, 174, 174);
+    padding: 1rem;
+    border: none;
+}
+input[type='submit']{
+    margin: 1rem 0;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 3rem;
+    background-color: rgb(38, 26, 26);
+    color: var(--blanco);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+
+textarea{
+    display: block;
+    margin-top: 1rem;
+    background-color: rgb(180, 174, 174);
+}

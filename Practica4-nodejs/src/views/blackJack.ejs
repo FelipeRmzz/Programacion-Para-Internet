@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/blackJack.css">
+
+</head>
+<body>
+    
+    <header>
+        <div class="header-background">
+            <h1 class="titulo">BlackJack</h1>
+        </div>
+    </header>
+    <%- include('partials/navBJ.ejs')%>
+    <section>
+        <nav class="botones">
+            <button class="btn" id="btn-newGame">New Game</button>
+            <button class="btn" id="btn-getCard">Get Card</button>
+            <button class="btn" id="btn-stop">Stop</button>
+        </nav>
+    </section>
+
+    <main>
+        <div class="jugadores-grid">
+            <div class="jugador">
+                <h2>You: <small>0</small></h2>
+                <div class="jugador-cartas">
+              
+                </div>
+            </div>
+
+            <div class="winOrlose"></div>
+
+            <div class="jugador">
+                <h2>Computer: <small>0</small></h2>
+                <div class="jugador-cartas">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <%- include('partials/footer.ejs') %>
+    <script src="/JavaScript/juego.js"></script>
+</body>
+</html>

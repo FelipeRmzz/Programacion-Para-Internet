@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('partials/head.ejs') %>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %>
+    
+    <main class="contenedor">
+        <form action="#">
+            <fieldset>
+                <legend>Contactame</legend>
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div>
+                    <label for="lastName">Apellido:</label>
+                    <input type="text" name="lastName" id="lastName" required>
+                </div>
+                <div>
+                    <label for="email">Correo:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="coments">Comentario:</label>
+                    <textarea name="coments" id="coments" cols="30" rows="2"></textarea>
+                </div>
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>
